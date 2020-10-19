@@ -24,7 +24,7 @@ class ViewController: UIViewController, ViewControllerProtocol {
     }
     
     func complete(_ json : JSON){
-        
+        let user = UserModel(UserNumber: json["UserNumber"].stringValue, UserName: json["UserName"].stringValue, UserPhone: json["UserPhone"].stringValue, UserAddress: json["UserAddress"].stringValue)
     }
     
     override func viewDidLoad() {
