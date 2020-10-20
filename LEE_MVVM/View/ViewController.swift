@@ -23,8 +23,8 @@ class ViewController: UIViewController, ViewControllerProtocol {
         self.viewModel.getFromServer(completion: self.complete)
     }
     
-    func complete(_ json : JSON){
-        let user = UserModel(UserNumber: json["UserNumber"].stringValue, UserName: json["UserName"].stringValue, UserPhone: json["UserPhone"].stringValue, UserAddress: json["UserAddress"].stringValue)
+    func complete(_ user : UserModel){
+        self.userName.text = user.UserName
     }
     
     override func viewDidLoad() {
